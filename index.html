@@ -2,14 +2,67 @@
 <html lang="en-ca">
 <head>
   <meta charset="utf-8">
-  <title>Volunteer form</title>
+  <title>Volunteer Sign-up</title>
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <link href="css/module.css" rel="stylesheet">
   <link href="css/type.css" rel="stylesheet">
   <link href="css/grid.css" rel="stylesheet">
   <link href="css/main.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Noto+Serif" rel="stylesheet">
 </head>
 <body>
-
+  <section class="contact gutter pad-t-2 pad-b-2">
+    <div class="max-length">
+      <h1>Apply to be a tree hugger</h1>
+      <p class="mega">Trees are one of the world’s most precious renewable resources—we need your help to renew the ecosystem.</p>
+    </div>
+    <form method="POST" action="https://formspree.io/ferg0258@algonquinlive.com">
+      <fieldset>
+        <legend class="mega italic push">Personal details</legend>
+        <div class="grid">
+          <div class="pad-right unit xs-1 s-1 m-1 l-1-2 xl-1-2 push">
+            <label for="name">Full name</label>
+            <input id="name" name="name" required>
+          </div>
+          <div class="pad-left unit xs-1 s-1 m-1 l-1-2 xl-1-2 push">
+            <label for="date of birth">Date of birth</label>
+            <input id="date of birth" name="date of birth" required>
+          </div>
+          <div class="pad-right unit xs-1 s-1 m-1 l-1-2 xl-1-2 push">
+            <label for="email">Email</label>
+            <input id="email" type="email" placeholder="me@me.com" name="email" required>
+          </div>
+          <div class="pad-left unit xs-1 s-1 m-1 l-1-2 xl-1-2 push">
+            <label for="subject">T-shirt size</label>
+            <select id="subject" name="_subject">
+              <option>Fitted: XS</option>
+              <option>Fitted: S</option>
+              <option>Fitted: M</option>
+              <option>Fitted: L</option>
+              <option>Fitted: XL</option>
+              <option>Straight-cut: XS</option>
+              <option>Straight-cut: S</option>
+              <option>Straight-cut: M</option>
+              <option>Straight-cut: L</option>
+              <option>Straight-cut: XL</option>
+            </select>
+          </div>
+          <div class="unit xs-1 s-1 m-1 l-1 xl-1 push">
+            <label for="address">Address</label>
+            <textarea id="address" name="address" required></textarea>
+          </div>
+        </div>
+      </fieldset>
+      <fieldset>
+        <legend class="mega italic">Mission statement</legend>
+        <label for="details">Why do you want to go to Mars?</label>
+        <textarea id="details" name="message" required></textarea>
+        <div>
+          <button class="btn btn-light mega" type="submit">Register for the trip!</button>
+        </div>
+        <input type="hidden" name="_subject" value="Request to join the mission">
+      </fieldset>
+    </form>
+  </section>
 </body>
 </html>
